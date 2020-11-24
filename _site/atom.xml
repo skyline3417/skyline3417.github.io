@@ -4,7 +4,7 @@
  <title>skyline's blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2020-11-24T12:21:26+09:00</updated>
+ <updated>2020-11-24T12:28:14+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>skyline</name>
@@ -13,10 +13,10 @@
 
  
  <entry>
-   <title>Introducing Langyon</title>
-   <link href="http://localhost:4000/gg/2020/04/03/introducing-lanyon/"/>
+   <title>Introducing Lanyon</title>
+   <link href="http://localhost:4000/dev/2020/04/03/introducing-lanyoncopy/"/>
    <updated>2020-04-03T00:00:00+09:00</updated>
-   <id>http://localhost:4000/gg/2020/04/03/introducing-lanyon</id>
+   <id>http://localhost:4000/dev/2020/04/03/introducing-lanyoncopy</id>
    <content type="html">&lt;p&gt;Lanyon is an unassuming &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that places content first by tucking away navigation in a hidden drawer. It’s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
 
 &lt;h3 id=&quot;builffft-on-pooleffffff&quot;&gt;Builffft on Pooleffffff&lt;/h3&gt;
@@ -58,10 +58,10 @@
  </entry>
  
  <entry>
-   <title>Introducing Lanyon</title>
-   <link href="http://localhost:4000/dev/2020/04/03/introducing-lanyon-copy/"/>
+   <title>Introducing Langyon</title>
+   <link href="http://localhost:4000/gg/2020/04/03/introducing-lanyon/"/>
    <updated>2020-04-03T00:00:00+09:00</updated>
-   <id>http://localhost:4000/dev/2020/04/03/introducing-lanyon copy</id>
+   <id>http://localhost:4000/gg/2020/04/03/introducing-lanyon</id>
    <content type="html">&lt;p&gt;Lanyon is an unassuming &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that places content first by tucking away navigation in a hidden drawer. It’s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
 
 &lt;h3 id=&quot;builffft-on-pooleffffff&quot;&gt;Builffft on Pooleffffff&lt;/h3&gt;
