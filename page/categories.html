@@ -1,0 +1,58 @@
+---
+layout: default
+title: Category
+permalink: /categories/
+icon: th-list
+type: page
+---
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+{% assign categories_max = 0 %}
+{% for category in site.categories %}
+  {% if category[1].size > categories_max %}
+    {% assign categories_max = category[1].size %}
+  {% endif %}
+{% endfor %}
+
+
+<div class="page clearfix">
+    <div class="left">
+      <h1>{{page.title}}</h1>
+      
+      <hr>
+      
+      <ul class="taxonomy__index">
+        {% for i in (1..categories_max) reversed %}
+          {% for category in site.categories %}
+            {% if category[1].size == i %}
+              <li>
+                <a href="#{{ category[0] | slugify }}">
+                  <strong>{{ category[0] }}</strong> <span style = "color: rgb(155, 155, 155);" class="taxonomy__count">{{ i }}</span>
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+      
+      <hr>
+      {% for category in site.categories %}
+      <h2 id="{{category | first}}">{{category | first}}</h2>   
+      <ul>
+        {% for posts in category %}
+        {% for post in posts %}
+        {% if post.url %}
+        <li> 
+          <a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+          <time class = "category_time">
+            {{ post.date | date:"%Y %m %d" }}
+          </time>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}   
+      </ul>
+      <hr>
+      {% endfor %}
+    </div>
+  </div>

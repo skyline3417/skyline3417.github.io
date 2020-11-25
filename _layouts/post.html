@@ -4,24 +4,58 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-date">{{ page.date | date:"%Y %m %d" }}</span>
   {{ content }}
 </div>
 
-{% if site.related_posts.size >= 1 %}
+{% assign same-cat-posts = "" | split: ',' %}
+{% assign i = -1 %}
+
+{% for post in site.posts %}
+  {% if post.categories == page.categories %}
+     {% assign i = i | plus: 1 %}
+     {% assign same-cat-posts = same-cat-posts | push: post %}
+  
+     {% if post.url == page.url %}
+        {% assign cur_post_idx = i %}
+     {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% assign idx_start = cur_post_idx | minus: 2 %}
+{% assign idx_end = cur_post_idx | plus: 2 %}
+
+{%if idx_start < 0 %}
+  {% assign idx_start = 0 %}
+{% endif %}
+
+{%if idx_end > i %}
+  {% assign idx_end = i %}
+{% endif %}
+
+
 <div class="related">
-  <h2>Related posts</h2>
+  <h2 >Category : {{page.categories}}<a style="float: right; font-size: 60%; padding-top: 10px;" href="{{ site.baseurl }}/categories/#{{ page.categories }}">view all</a></h2>
   <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
+    {% for j in (idx_start..idx_end) %}
+    {% if j == cur_post_idx %}
+      <li style = "list-style: circle;" class ="ml-2rem font-size-120">
         <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
+          <a class = "font-size-120" href="{{ site.baseurl }}{{ same-cat-posts[j].url }}">
+          {% else %}
+      <li class ="ml-2rem font-size-120">
+        <h3>
+          <a href="{{ site.baseurl }}{{ same-cat-posts[j].url }}">
+          {% endif %}
+            {{ same-cat-posts[j].title }}
+            <small class = "category_time">{{ same-cat-posts[j].date | date:"%Y %m %d" }}</small>
           </a>
         </h3>
       </li>
     {% endfor %}
   </ul>
 </div>
-{% endif %}
+<hr>
+{%- if site.disqus.shortname -%}
+    {%- include disqus.html -%}
+  {%- endif -%}

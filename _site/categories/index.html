@@ -1,21 +1,136 @@
-<ul class="entry-meta inline-list">
-    {% for item in (0..site.categories.size) %}{% unless forloop.last %}
-      {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
-        <li><a href="#{{ this_word }}" class="tag">
-      <span class="term">{{ this_word }}</span>
-      <span class="count">{{ site.categories[this_word].size }}</span>
-      </a></li>
-    {% endunless %}{% endfor %}
-  </ul>
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Category &middot; Devlog
+    
+  </title>
+
   
-  {% for item in (0..site.categories.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
-    <article>
-        <a href="{{site.url}}/categories/{{this_word}}"><h2 id="{{ this_word }}" class="tag-heading">{{ this_word }}</h2></a>
-      <ul>
-      {% for post in site.categories[this_word] %}{% if post.title != null %}
-        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-      {% endif %}{% endfor %}
-          </ul>
-      </article><!-- /.hentry -->
-  {% endunless %}{% endfor %}
+  <link rel="canonical" href="http://localhost:4000/categories/">
+  
+
+  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+
+  
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="http://localhost:4000/public/favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:4000/atom.xml">
+
+  
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://localhost:4000/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/about/">About</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+
+    <div>
+      <a href="/categories/"
+           class="sidebar-nav-item">Category</a>
+
+      <nav class="content-ul">
+        
+      </nav>
+    </div>  
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2020. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Devlog</a>
+            <small>by skyline</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+
+
+
+<div class="page clearfix">
+    <div class="left">
+      <h1>Category</h1>
+      
+      <hr>
+      
+      <ul class="taxonomy__index">
+        
+      </ul>
+      
+      <hr>
+      
+    </div>
+  </div>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

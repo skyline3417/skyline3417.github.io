@@ -5,22 +5,50 @@
     margin-right: 15px;
     margin-top: 3px;
     padding: 0 5px;
-    font-size: 12px;
-    color: #000;
-    background-color: #bbb;
+    font-size: 15px;
+    color: rgb(155, 155, 155);
     border-radius: 0%;
     transition: 0.5s ease-in-out;
-  }
+}
   
-  .pl-3rem {
+.pl-3rem {
     padding-left: 3rem;
-  }
-  
-  .tags-cloud{
-    padding: 0 1.5rem 0 3rem;
-    border-top: 1px solid rgba(255,255,255,.1);
-  }
-  
-  .tags-cloud > div{
-    background: #202020;
-  }
+    }
+.ml-2rem {
+    margin-left: 2rem;
+    }
+.ml-1rem {
+    margin-left: 1rem;
+    }
+.font-size-120 {
+    font-size: 120%;
+}
+.float_left {
+    float: left;
+    width: 50%;
+}
+.float_right {
+    float: right;
+    width: 50%;
+}
+
+.width_100 {
+    width: 100%;
+    height: 50%;
+    margin: 10px auto;
+}
+.category_time {
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgb(155, 155, 155);
+}
+.taxonomy__index {
+display: grid;
+grid-column-gap: 2em;
+grid-template-columns: repeat(2, 1fr);
+margin: 1.414em 0;
+margin-left: 2rem;
+padding: 0;
+font-size: 80%;
+list-style: disc;
+}
