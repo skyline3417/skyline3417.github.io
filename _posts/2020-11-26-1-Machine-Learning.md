@@ -12,10 +12,10 @@ Carnegie Mellon Univ. 의 Tom M. Mitchell 교수는 저서 Machine Learning 에�
 
 > A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at task in T, as measured by P, improves with experience E.
 
-만약 P로 측정된 컴퓨터 프로그램의 작업 T의 성능이 경험 E로 향상되는 경우, 
+>만약 P로 측정된 컴퓨터 프로그램의 작업 T의 성능이 경험 E로 향상되는 경우, 
 그 컴퓨터 프로그램은 작업 T와 성능 측정 P에 대해 경험 E를 학습했다라고 할 수 있다.
 
-- Tom M. Mitchell (1998)
+>- Tom M. Mitchell (1998)
 
 간단하게 어떠한 작업 T에 대해 경험 E를 통하여 그 T에 대한 성능 P를 높이는 것을 **머신 러닝**이라고 할 수 있다.
 
